@@ -1,0 +1,7 @@
+.idea/
+target/
+test-output/
+*.iml
+.DS_Store
+*.html
+*.png
