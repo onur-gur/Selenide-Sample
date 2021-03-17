@@ -5,6 +5,7 @@ import pageModel.BasePage;
 import pageModel.HomePage;
 import pageModel.LoginPage;
 import pageModel.LoginPage.*;
+import pageModel.MyAccountPage;
 
 import java.util.regex.Pattern;
 
@@ -17,6 +18,7 @@ public class AccountSteps {
     public void checkLogin(){
         HomePage homePage = new HomePage();
         LoginPage loginPage = new LoginPage();
+        MyAccountPage myAccountPage = new MyAccountPage();
 
         homePage.goToPage();
         homePage.closePopup();
@@ -26,6 +28,13 @@ public class AccountSteps {
         homePage.closeNotification();
         assertEquals("hesabım",loginPage.checkLogin().toLowerCase());
         //Boolean c = Pattern.compile(Pattern.quote(s), Pattern.CASE_INSENSITIVE).matcher(text).find();
+        homePage.clickMyAccount();
+        myAccountPage.clickAccountInfo();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 
     }

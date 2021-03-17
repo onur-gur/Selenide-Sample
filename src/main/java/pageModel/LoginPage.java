@@ -1,10 +1,17 @@
 package pageModel;
 
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
+
+import static com.codeborne.selenide.Selenide.$;
+
 public class LoginPage extends BasePage {
     String txtEmail ="#login-email";
     String txtPassword = "#login-password-input";
     String btnSubmit = ".q-primary.q-fluid";
     String txtMyAccount ="div[class='link account-user']>p[class='link-text']";
+
+
 
 
     public void login(){
